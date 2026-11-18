@@ -1,0 +1,6 @@
+<linker>
+  <!-- Managed stripping is High. The report is built with Newtonsoft.Json's JObject/JToken and written by the probe's own code, so both are kept whole:
+       a type removed by the linker would only show up on a device, as a report that cannot be written. -->
+  <assembly fullname="XrProbe.Core" preserve="all" />
+  <assembly fullname="Newtonsoft.Json" preserve="all" />
+</linker>

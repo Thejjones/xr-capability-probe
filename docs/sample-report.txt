@@ -1,0 +1,161 @@
+XR Glasses Capability Probe report (format 1, app version sample)
+NOTICE: SAMPLE FROM SIMULATED DATA, NOT A REAL DEVICE. Every value was made up by the probe's own tests to show the shape of a report.
+started 2000-01-01T00:00:00Z   finished 2000-01-01T00:09:30Z   complete: yes
+device abis: arm64-v8a
+device android_release: 14
+device device: sample
+device device_model: Sample unit (invented)
+device graphics_device: Sample GPU (Vulkan 1.3.0)
+device manufacturer: Sample maker
+device memory_mb: 12000
+device model: Sample unit
+device operating_system: Android OS 14 / API-34 (invented build)
+device platform: Android
+device processor: ARM64 FP ASIMD (invented) x8
+device product: sample
+device sdk_int: 34
+device security_patch: 2000-01-01
+device unity_version: 6000.6.9f1
+device xr_loader: OpenXR Loader (invented)
+summary: 17 pass, 0 fail, 1 unsupported, 4 info, 0 error, 0 skipped
+
+== runtime
+  [PASS] OpenXR runtime: Sample runtime 1.0, OpenXR 1.1.0, Unity plug-in 1.19.0; 1 extensions enabled, 3 available   (runtime.openxr, 0.0 s)
+        api_version = 1.1.0
+        extensions_available_count = 3
+        extensions_enabled_count = 1
+        runtime_name = Sample runtime
+        runtime_version = 1.0
+        unity_plugin_version = 1.19.0
+  [PASS] OpenXR extension list: 1 of 17 key extensions present; 2 extensions in all (as reported by the runtime)   (runtime.extensions, 0.0 s)
+        all_extensions = [XR_ANDROID_depth_texture, XR_KHR_sample]
+        key_absent = [room mesh (XR_ANDROID_scene_meshing), planes and anchors (trackables) (XR_ANDROID_trackables), object tracking (XR_ANDROID_trackables_object), marker / QR tracking (XR_ANDROID_trackables_marker), light estimation (XR_ANDROID_light_estimation), lens dimming (XR_ANDROID_global_passthrough_dimming), anchor persistence (XR_ANDROID_device_anchor_persistence), passthrough camera state (XR_ANDROID_passthrough_camera_state), raycast (XR_ANDROID_raycast), hand tracking (XR_EXT_hand_tracking), hand mesh (XR_ANDROID_hand_mesh), refresh rates (XR_FB_display_refresh_rate), performance metrics (XR_ANDROID_performance_metrics), wear detection (XR_EXT_user_presence), eye tracking (XR_ANDROID_eye_tracking), face tracking (XR_ANDROID_face_tracking)]
+        key_present = [depth map (XR_ANDROID_depth_texture)]
+        names_mentioning_markers_qr_objects_geospatial_etc = [XR_ANDROID_depth_texture]
+== features
+  [UNSUPPORTED] Environment depth: no provider in this sample (reported by the runtime, not exercised)   (feature.depth, 0.0 s)
+== scene
+  [PASS] Planes and their labels over 20 s: first plane after 3.0 s; up to 3 planes at once, labels: Floor, Table, Wall   (planes.survey, 20.0 s)
+        distinct_planes_count = 3
+        first_plane_s = 3.017
+        max_planes_at_once_count = 3
+  [PASS] Plane label Floor: 1 plane(s) at most, up to 8.0 m2 in all, first seen after 3 s   (planes.survey.label.floor, 0.0 s)
+        first_seen_s = 3.017
+        max_area_m2 = 8
+        max_count = 1
+  [PASS] Plane label Table: 1 plane(s) at most, up to 1.2 m2 in all, first seen after 10 s   (planes.survey.label.table, 0.0 s)
+        first_seen_s = 10
+        max_area_m2 = 1.2
+        max_count = 1
+  [PASS] Plane label Wall: 1 plane(s) at most, up to 5.0 m2 in all, first seen after 10 s   (planes.survey.label.wall, 0.0 s)
+        first_seen_s = 10
+        max_area_m2 = 5
+        max_count = 1
+  [INFO] Plane label Ceiling: not seen in 20 s (it may not have been in view)   (planes.survey.label.ceiling, 0.0 s)
+  [PASS] Light estimation: values after 0.0 s (units as the runtime gives them): average_brightness 0.6, color_temperature_k 4200   (light.estimation, 10.0 s)
+        average_brightness = 0.6
+        color_temperature_k = 4200
+        first_value_s = 0
+== display
+  [PASS] Display refresh rates offered: offered: 72, 90 Hz; current 72 Hz (as reported by the runtime); the probe does not change the rate   (display.refresh, 0.0 s)
+        current_hz = 72
+        offered_hz = [72, 90]
+        refresh_rate_changed_by_probe = False
+  [PASS] Per-eye resolution and field of view as reported: per eye 1920x1080 px (texture scale 1), field of view 52 x 30 degrees (as reported by the runtime); the published figures are 1920x1200 per eye and 70 degrees on the diagonal   (display.eyes, 0.0 s)
+        eye_texture_scale_ratio = 1
+        left_fov_h_deg = 52
+        left_fov_left_right_up_down_deg = [26, 26, 15, 15]
+        left_fov_v_deg = 30
+        left_resolution_px = 1920x1080
+        right_fov_h_deg = 52
+        right_fov_left_right_up_down_deg = [26, 26, 15, 15]
+        right_fov_v_deg = 30
+        right_resolution_px = 1920x1080
+== camera
+  [PASS] Camera2: cameras and whether a frame can be read: 2 camera(s) listed, 2 delivered frames   (camera, 4.1 s)
+        camera_count = 2
+        readable_cameras_count = 2
+  [INFO] Camera 0 (back (world-facing)): back (world-facing); 2 output sizes (largest 1920x1080); frame rates 15-30   (camera.list.0, 0.0 s)
+        capability_codes = [0, 1]
+        facing = back (world-facing)
+        fps_ranges = [15-30]
+        output_sizes_px = [1920x1080, 640x480]
+        physical_camera_count = 0
+  [INFO] Camera 1 (front (user-facing)): front (user-facing); 1 output sizes (largest 640x480); frame rates 30-30   (camera.list.1, 0.0 s)
+        capability_codes = [0]
+        facing = front (user-facing)
+        fps_ranges = [30-30]
+        output_sizes_px = [640x480]
+        physical_camera_count = 0
+  [PASS] Camera 0: read frames: 120 frames in 4.0 s (30 per second) at 640x480 px; counted and dropped   (camera.frames.0, 0.0 s)
+        frames_count = 120
+        measured_seconds = 4
+        size_px = 640x480
+  [PASS] Camera 1: read frames: 120 frames in 4.0 s (30 per second) at 640x480 px; counted and dropped   (camera.frames.1, 0.0 s)
+        frames_count = 120
+        measured_seconds = 4
+        size_px = 640x480
+== audio
+  [PASS] Microphone: channels and sample rates: 1 input(s); up to 4 channel(s); rates 16000/48000 Hz   (audio.mic, 4.0 s)
+        inputs = [builtin mic "array": channels 1/2/4, rates 16000/48000 Hz]
+        max_channels_count = 4
+        native_output_sample_rate_hz = 48000
+        sample_rates_hz = [16000, 48000]
+  [PASS] Microphone: read audio: 2 channel(s) at 48000 Hz for 2.0 s; peak level 0.2 of full scale (0 to 1; level only, nothing stored)   (audio.mic.read, 0.0 s)
+        channels_count = 2
+        peak_level_fraction_of_full_scale = 0.2
+        reads_count = 40
+        sample_rate_hz = 48000
+== device
+  [INFO] Thermal headroom, thermal status and battery over 60 s: see thermal and battery sub-rows and the series in the JSON   (device.thermal_battery, 60.0 s)
+        samples_count = 12
+  [PASS] Thermal status and headroom: status 0 to 0 (0 none, 1 light, 2 moderate, 3 severe), headroom up to 0.37 as a ratio (1.0 = at the throttling limit)   (device.thermal_battery.thermal, 0.0 s)
+        headroom_ratio_max = 0.372
+        status_code_first = 0
+        status_code_last = 0
+        status_code_max = 0
+  [PASS] Battery level: the app can read the battery: 85 to 84 percent over 60 s, charging: False (this is the puck's own battery; the glasses have none)   (device.thermal_battery.battery, 0.0 s)
+        charging = False
+        percent_first = 85
+        percent_last = 84.45
+== soak
+  [PASS] Soak: a synthetic figure for 1 minutes: 4321 frames in 60 s (72 per second) of a generated figure of 31680 triangles, 55 bones and 4 materials (synthetic load, not a real character); frame time p50 13.9 ms, p95 13.9, p99 13.9, max 13.9; 0.0 % over the budget by more than 5 percent (budget 13.9 ms from the unit's reported 72 Hz)   (soak, 60.0 s)
+        battery_drop_per_hour_pct_extrapolated = 89.979
+        battery_percent_first = 84.4
+        battery_percent_last = 82.9
+        budget_ms = 13.889
+        budget_source = the unit's reported refresh rate (72 Hz)
+        frame_ms_max = 13.889
+        frame_ms_p50 = 13.889
+        frame_ms_p95 = 13.889
+        frame_ms_p99 = 13.889
+        frame_ms_p99_9 = 13.889
+        frames_count = 4321
+        frames_over_budget_pct = 0
+        frames_over_double_budget_pct = 0
+        mean_fps = 72
+        measured_seconds = 60.014
+        safety_limits = thermal status 3, battery temperature 42.0 C, battery 20 percent while not charging (conservative defaults, not vendor limits)
+        thermal_headroom_ratio_max = 0.434
+        thermal_status_code_first = 0
+        thermal_status_code_max = 1
+        what_is_drawn = a generated figure of 31680 triangles, 55 bones and 4 materials (synthetic load, not a real character)
+
+== series (full samples are in the JSON)
+  battery.charging_0_or_1: 19 samples, first 0, last 0, min 0, max 0
+  battery.percent: 19 samples, first 85, last 82.9, min 82.9, max 85
+  battery.temp_c: 19 samples, first 31, last 31.84, min 31, max 31.84
+  light.average_brightness: 601 samples, first 0.6, last 0.6, min 0.6, max 0.6
+  light.color_temperature_k: 601 samples, first 4200, last 4200, min 4200, max 4200
+  planes.area_m2.Floor: 17 samples, first 8, last 8, min 8, max 8
+  planes.area_m2.Table: 10 samples, first 1.2, last 1.2, min 1.2, max 1.2
+  planes.area_m2.Wall: 10 samples, first 5, last 5, min 5, max 5
+  planes.count.Floor: 17 samples, first 1, last 1, min 1, max 1
+  planes.count.Table: 10 samples, first 1, last 1, min 1, max 1
+  planes.count.Wall: 10 samples, first 1, last 1, min 1, max 1
+  planes.total_count: 20 samples, first 0, last 3, min 0, max 3
+  soak_frames.frame_ms_max: 7 samples, first 13.889, last 13.889, min 13.889, max 13.889
+  soak_frames.frame_ms_p50: 7 samples, first 13.889, last 13.889, min 13.889, max 13.889
+  soak_frames.frame_ms_p99: 7 samples, first 13.889, last 13.889, min 13.889, max 13.889
+  thermal.headroom_ratio: 19 samples, first 0.35, last 0.434, min 0.35, max 0.434
+  thermal.status_code: 19 samples, first 0, last 1, min 0, max 1

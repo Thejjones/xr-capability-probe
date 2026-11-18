@@ -1,0 +1,65 @@
+name: Device report
+description: Share the result of running the probe on a real unit
+title: "Device report: <unit and firmware>"
+labels: ["device-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for running the probe. Read your report before you paste it: it is meant to hold no personal identifiers, but you are the last check. Do not paste anything you are not happy to make public.
+  - type: input
+    id: unit
+    attributes:
+      label: Unit
+      description: The device and how you got it (for example "XREAL Aura, retail, bought in 2026")
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware or system version
+      description: As shown in the unit's settings
+    validations:
+      required: true
+  - type: input
+    id: probe-version
+    attributes:
+      label: Probe version
+      description: The "version" line at the top of the report, and where you got the APK (release or built from source)
+    validations:
+      required: true
+  - type: dropdown
+    id: complete
+    attributes:
+      label: Did the run finish?
+      options:
+        - It finished (the report says complete yes)
+        - I stopped it early
+        - It crashed or the unit rebooted
+        - The soak stopped by itself (heat or battery)
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What you saw
+      description: Anything the report cannot say. Did the lenses dim? Did the colour check show red in the left eye and blue in the right? Did the camera indicator light when the camera rows ran? Did it feel warm?
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Text report
+      description: The contents of aura-probe-report.txt (or attach the JSON file after you create the issue)
+      render: text
+    validations:
+      required: true
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Before you send
+      options:
+        - label: I read the report and I am happy to make it public
+          required: true
+        - label: I know the app has no network access and nothing was sent anywhere by it
+          required: false

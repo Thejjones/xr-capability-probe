@@ -1,0 +1,23 @@
+{
+    "name": "XrProbe.App",
+    "rootNamespace": "XrProbe",
+    "references": [
+        "XrProbe.Core",
+        "XrProbe.Platform",
+        "Unity.XR.ARFoundation",
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.Management",
+        "Unity.XR.Hands",
+        "Unity.XR.CoreUtils",
+        "Unity.Nuget.Newtonsoft-Json"
+    ],
+    "includePlatforms": [ "Android", "Editor" ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
